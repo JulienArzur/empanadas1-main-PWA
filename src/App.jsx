@@ -142,7 +142,7 @@ function App() {
 
                     <div className="col-12">
                       <div className="tm-header-bar" ref={navbarRef}>
-                        <ul className="tm-nav-ul">
+                        <ul className="tm-nav-ul centered-nav">
                           <li className="tm-nav-li">
                             <Link to="/" className="tm-nav-link">
                               Home

@@ -5,7 +5,7 @@ export const db = [
     name: 'Empanadas Salteñas',
     image: '/salteñas.jpg',
     description: 'empanada jugosa picante y rellena de carne, de res o pollo, huevo duro, papa, arvejas, aceitunas y ají.',
-    price: 18000,
+    price: 2500,
     unit: '/docena',
     category: 'empanadas'
   },
@@ -14,7 +14,7 @@ export const db = [
     name: 'Empanadas Criollas',
     image: '/empanadas-criollas-ig03.jpg',
     description: 'carne picada o cortada al cuchillo, pasando por el jamón y queso o variando con cebolla y queso.',
-    price: 18000,
+    price: 2500,
     unit: '/docena',
     category: 'empanadas'
   },
@@ -23,7 +23,7 @@ export const db = [
     name: 'Caprese',
     image: '/caprese-03.jpg',
     description: 'Empanada estilo argentina, rellena de queso mozzarella, tomate troceado y albahaca fresca.',
-    price: 15000,
+    price: 2000,
     unit: '/docena',
     category: 'empanadas'
   },
@@ -32,7 +32,7 @@ export const db = [
     name: 'Empanadas de Jamon y Queso',
     image: '/jamon y queso.jpg',
     description: 'Empanada tradicional rellena de jamon y queso.',
-    price: 15000,
+    price: 2000,
     unit: '/docena',
     category: 'empanadas'
   },

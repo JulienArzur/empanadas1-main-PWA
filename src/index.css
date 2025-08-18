@@ -1727,56 +1727,71 @@ address {
 }
 
 @media (max-width: 600px) {
-  /* Barra y menú en una sola línea */
   .tm-header-bar {
+    display: flex;
     flex-direction: row;
-    justify-content: space-between; /* links a la izquierda, carrito a la derecha */
-    align-items: center;
-    padding: 8px 12px;
+    justify-content: space-between;
+    align-items: center; /* 🔹 Esto alinea verticalmente carrito y links */
+    padding: 6px 10px;
   }
 
   .tm-nav-ul {
+    display: flex;
     flex-direction: row;
     gap: 1rem;
     margin: 0;
     padding: 0;
+    align-items: center;
   }
 
   .tm-nav-li {
     padding: 0;
     margin: 0;
-    border: none;
   }
 
   .tm-nav-link {
-    display: inline-block;
-    padding: 8px 10px;
-    font-size: 1rem;
-    border: none;
+    font-size: 0.9rem;
+    padding: 4px;
   }
 
-  /* Estado normal dentro del navbar */
   .cart-icon {
-    position: relative; /* sigue en el flujo del navbar */
-    top: auto;
-    right: auto;
-    margin-left: auto;
-    background: none;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 0;
-    z-index: auto;
+    position: relative; /* En la misma línea */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    margin-left: 1rem;
   }
 
-  /* Estado fijo cuando se hace scroll */
+  .cart-icon img {
+    width: 24px;
+    height: 24px;
+  }
+
   .cart-icon.fixed-mobile {
     position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 2000;
-    background: rgba(255, 255, 255, 0.9);
+    top: 8px;
+    right: 8px;
+    background: none;
     border-radius: 50%;
-    padding: 6px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 2px;
+    box-shadow: none;
+    z-index: 2000;
   }
+}
+.cart-icon {
+  position: fixed; /* Esto lo saca del flujo normal y lo mantiene fijo */
+  top: 20px;       /* Distancia desde el borde superior */
+  right: 20px;     /* Distancia desde el borde derecho */
+  z-index: 1002;   /* Asegura que el carrito esté por encima de otros elementos */
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Transición para un efecto suave al pasar el cursor */
+}
+
+.tm-nav-ul.centered-nav {
+  display: flex;
+  justify-content: center;  /* 🔹 Esto lo centra */
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
