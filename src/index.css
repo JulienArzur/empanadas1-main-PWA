@@ -1786,12 +1786,59 @@ address {
   transition: transform 0.3s ease; /* Transición para un efecto suave al pasar el cursor */
 }
 
+/* Navbar centrado en desktop */
 .tm-nav-ul.centered-nav {
   display: flex;
-  justify-content: center;  /* 🔹 Esto lo centra */
-  gap: 2rem;
+  justify-content: center;
+  gap: 2rem; /* Espacio entre links en pantallas grandes */
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
+}
+/* 🔹 Navbar super compacto en pantallas muy chicas (<400px) */
+@media (max-width: 400px) {
+  .tm-nav-ul.centered-nav {
+    gap: 0.2rem;         /* Espacio mínimo entre links */
+    font-size: 0.7rem;   /* Fuente más chica */
+    flex-wrap: nowrap;   /* Siempre horizontal */
+    justify-content: center;
+  }
+
+  .tm-nav-link {
+    padding: 2px;        /* Casi sin padding */
+    white-space: nowrap; /* Nunca cortar palabras */
+  }
+}
+
+.copy-alias-btn {
+  background-color: #cc942d; /* Color principal */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.copy-alias-btn:hover {
+  background-color: #b5791b;
+  transform: scale(1.05);
+}
+
+/* 🔹 Navbar ultracompacto para pantallas muy chicas (<320px aprox.) */
+@media (max-width: 320px) {
+  .tm-nav-ul.centered-nav {
+    gap: 0.15rem;              /* Casi nada de espacio */
+    font-size: 3.2vw;          /* 🔹 Se adapta al ancho de pantalla */
+    flex-wrap: nowrap;         /* Siempre horizontal */
+    justify-content: center;
+  }
+
+  .tm-nav-link {
+    padding: 1px 2px;          /* Padding mínimo */
+    white-space: nowrap;       /* Nunca cortar texto */
+  }
 }

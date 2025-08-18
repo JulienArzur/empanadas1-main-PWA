@@ -336,7 +336,7 @@ function App() {
                   <div className="alias-group">
                     <strong className="alias-text">laredonda.sabrosa</strong>
                     <button className="copy-alias-btn" onClick={handleCopyAlias}>
-                      <img src="/copiar.png" alt="Copiar Alias" />
+                      Copiar
                     </button>
                   </div>
                   {showCopySuccess && <span className="copy-success-message">¡Copiado!</span>}
